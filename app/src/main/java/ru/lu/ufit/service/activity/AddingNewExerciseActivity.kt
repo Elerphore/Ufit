@@ -13,17 +13,8 @@ import ru.lu.ufit.ui.theme.UFitTheme
 class AddingNewExerciseActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
-            UFitTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    AddNewExerciseMainScreen().Main()
-                }
-            }
+            UFitTheme { Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) { AddNewExerciseMainScreen().Main() } }
         }
-
     }
 }
