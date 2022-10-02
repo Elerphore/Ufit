@@ -5,5 +5,5 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Exercise::class], exportSchema = false, version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun exerciseDao(): ExerciseDao
+    abstract fun getExerciseDao(): ExerciseDao
 }

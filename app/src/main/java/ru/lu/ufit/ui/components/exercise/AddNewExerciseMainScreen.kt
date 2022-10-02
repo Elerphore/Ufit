@@ -20,14 +20,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import ru.lu.ufit.service.viewmodel.exercise.AddingNewExerciseViewModel
 
+@AndroidEntryPoint
 class AddNewExerciseMainScreen : Fragment() {
     @Composable
     fun Main(
         scaffoldState: ScaffoldState = rememberScaffoldState(),
-        viewModel: AddingNewExerciseViewModel = hiltViewModel()
     ) {
+        val viewModel: AddingNewExerciseViewModel = hiltViewModel()
+
         LaunchedEffect(scaffoldState.snackbarHostState) {
-            viewModel.main()
         }
         
         Column(
